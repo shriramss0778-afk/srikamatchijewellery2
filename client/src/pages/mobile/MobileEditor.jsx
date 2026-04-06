@@ -13,7 +13,7 @@ export default function MobileEditor({
   images, onSelectImage, isLoadingImages, imageError,
   onUploadPhotos, isUploadingPhotos,
 }) {
-  const [activeTab, setActiveTab] = useState('preview'); // 'edit', 'preview'
+  const [activeTab, setActiveTab] = useState('edit'); // 'edit', 'preview'
 
   return (
     <div className="fixed inset-0 flex flex-col pt-safe bg-[#0A0A0A] overflow-hidden">
@@ -59,6 +59,14 @@ export default function MobileEditor({
                 isExporting={isDownloading || isSharing}
               />
             </div>
+
+            <button
+              type="button"
+              onClick={() => setActiveTab('edit')}
+              className="mt-4 text-[11px] font-cinzel font-bold tracking-[0.2em] uppercase text-yellow-500/80 border border-yellow-700/30 bg-black/30 px-4 py-2 rounded-full active:scale-95 transition-transform"
+            >
+              Edit Rates & Photos
+            </button>
 
             {/* Quick Actions overlay when in preview */}
             <div className="mt-8 grid grid-cols-2 gap-3 w-full max-w-[405px]">
@@ -107,7 +115,7 @@ export default function MobileEditor({
       <nav className="fixed bottom-0 left-0 right-0 h-20 bg-black/90 backdrop-blur-xl border-t border-yellow-900/30 px-6 flex items-center justify-around z-50">
         <button 
           onClick={() => setActiveTab('edit')}
-          className={`flex flex-col items-center gap-1.5 transition-all duration-300 ${activeTab === 'edit' ? 'text-yellow-400 scale-110' : 'text-yellow-900/30'}`}
+          className={`flex flex-col items-center gap-1.5 transition-all duration-300 ${activeTab === 'edit' ? 'text-yellow-400 scale-110' : 'text-yellow-700/60'}`}
         >
           <div className={`p-2 rounded-xl border transition-colors ${activeTab === 'edit' ? 'bg-yellow-400/10 border-yellow-400/50' : 'bg-transparent border-transparent'}`}>
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -119,7 +127,7 @@ export default function MobileEditor({
 
         <button 
           onClick={() => setActiveTab('preview')}
-          className={`flex flex-col items-center gap-1.5 transition-all duration-300 ${activeTab === 'preview' ? 'text-yellow-400 scale-110' : 'text-yellow-900/30'}`}
+          className={`flex flex-col items-center gap-1.5 transition-all duration-300 ${activeTab === 'preview' ? 'text-yellow-400 scale-110' : 'text-yellow-700/60'}`}
         >
           <div className={`p-2 rounded-xl border transition-colors ${activeTab === 'preview' ? 'bg-yellow-400/10 border-yellow-400/50' : 'bg-transparent border-transparent'}`}>
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

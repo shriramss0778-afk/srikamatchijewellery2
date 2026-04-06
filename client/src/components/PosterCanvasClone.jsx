@@ -5,6 +5,8 @@ import goddessImg from '../assets/LOGO-removebg-preview.png';
 const CINZEL_STACK = "'Cinzel', serif";
 const PLAYFAIR_STACK = "'Playfair Display', serif";
 const TAMIL_STACK = "'Noto Serif Tamil', serif";
+const RATE_STACK = "'Cormorant Garamond','Noto Serif Tamil',serif";
+const TIMES_STACK = "'Times New Roman', Times, serif";
 
 const GOLD = '#d1ad52';
 const PALE_GOLD = '#f2dfb0';
@@ -233,41 +235,116 @@ const PosterCanvasClone = forwardRef(function PosterCanvasClone(
       <div
         style={{
           position: 'absolute',
-          left: '36px',
-          right: '36px',
-          bottom: '18px',
-          display: 'grid',
-          gridTemplateColumns: '1fr 1fr',
-          alignItems: 'end',
-          columnGap: '16px',
+          left: '26px',
+          right: '26px',
+          bottom: '22px',
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'flex-end',
         }}
       >
         <div
           style={{
-            fontFamily: PLAYFAIR_STACK,
-            textAlign: 'left',
-            color: PALE_GOLD,
-            textShadow: '0 2px 5px rgba(0,0,0,0.9)',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'flex-start',
+            gap: '8px',
+            minWidth: 0,
           }}
         >
-          <div style={{ fontSize: '8.7px', fontWeight: 700, letterSpacing: '0.04em' }}>
-            916 KDM 22CT Gold &amp; Silver
+          <div
+            style={{
+              fontFamily: TIMES_STACK,
+              textAlign: 'left',
+              fontSize: '11.2px',
+              fontWeight: 700,
+              lineHeight: 0.94,
+              letterSpacing: '0.012em',
+              color: PALE_GOLD,
+              textShadow: '0 2px 6px rgba(0,0,0,0.92)',
+              whiteSpace: 'nowrap',
+            }}
+          >
+            916 KDM 22CT GOLD &amp; SILVER
           </div>
-          <div style={{ marginTop: '5px', fontFamily: TAMIL_STACK, fontSize: '7.6px', fontWeight: 700, opacity: 0.92 }}>
+          <div
+            style={{
+              fontFamily: TAMIL_STACK,
+              textAlign: 'left',
+              fontSize: '9.8px',
+              fontWeight: 700,
+              lineHeight: 1,
+              color: GOLD,
+              letterSpacing: '0.002em',
+              textShadow: '0 2px 6px rgba(0,0,0,0.92)',
+            }}
+          >
+            நகைகள் வாங்கிட...
+          </div>
+        </div>
+
+
+        <div
+          style={{
+            display: 'none',
+            fontFamily: RATE_STACK,
+            textAlign: 'left',
+            color: GOLD,
+            textShadow: '0 2px 6px rgba(0,0,0,0.92)',
+            alignSelf: 'start',
+          }}
+        >
+          <div
+            style={{
+              fontSize: '9.2px',
+              fontWeight: 700,
+              lineHeight: 1,
+              color: GOLD,
+              letterSpacing: '0.004em',
+            }}
+          >
             நகைகள் வாங்கிட...
           </div>
         </div>
 
         <div
           style={{
-            fontFamily: PLAYFAIR_STACK,
-            textAlign: 'right',
-            color: PALE_GOLD,
-            textShadow: '0 2px 5px rgba(0,0,0,0.9)',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'flex-end',
+            gap: '8px',
+            minWidth: 0,
           }}
         >
-          <div style={{ fontSize: '8.7px', fontWeight: 700, letterSpacing: '0.03em' }}>+91 9443565847</div>
-          <div style={{ marginTop: '5px', fontSize: '7.3px', fontWeight: 700, opacity: 0.84 }}>
+          <div
+            style={{
+              fontFamily: TIMES_STACK,
+              textAlign: 'right',
+              fontSize: '12.8px',
+              fontWeight: 700,
+              lineHeight: 0.94,
+              letterSpacing: '0.012em',
+              color: PALE_GOLD,
+              textShadow: '0 2px 6px rgba(0,0,0,0.92)',
+              whiteSpace: 'nowrap',
+            }}
+          >
+            +91 9443565847
+          </div>
+          <div
+            style={{
+              fontFamily: TIMES_STACK,
+              textAlign: 'right',
+              fontSize: '9.2px',
+              fontWeight: 700,
+              lineHeight: 1,
+              opacity: 0.88,
+              color: GOLD,
+              letterSpacing: '0.006em',
+              textShadow: '0 2px 6px rgba(0,0,0,0.92)',
+              whiteSpace: 'nowrap',
+            }}
+          >
             156/1 S.S Kovil Street, Pollachi
           </div>
         </div>
@@ -551,7 +628,7 @@ function RateCol({ tamil, sub, badge, value, showDivider }) {
     <div
       style={{
         position: 'relative',
-        padding: '14px 8px 10px',
+        padding: '10px 8px 10px',
         textAlign: 'center',
         display: 'flex',
         flexDirection: 'column',
@@ -575,10 +652,10 @@ function RateCol({ tamil, sub, badge, value, showDivider }) {
       <div
         style={{
           fontFamily: TAMIL_STACK,
-          fontSize: '10.4px',
+          fontSize: '11.2px',
           fontWeight: 800,
           color: '#dfc069',
-          marginBottom: '8px',
+          marginBottom: '4px',
           lineHeight: 1.1,
           whiteSpace: 'nowrap',
         }}
@@ -593,7 +670,7 @@ function RateCol({ tamil, sub, badge, value, showDivider }) {
           fontWeight: 700,
           letterSpacing: '0.04em',
           color: 'rgba(204,171,99,0.82)',
-          marginBottom: '11px',
+          marginBottom: '7px',
           whiteSpace: 'nowrap',
         }}
       >
@@ -615,7 +692,7 @@ function RateCol({ tamil, sub, badge, value, showDivider }) {
           fontWeight: 800,
           fontSize: '5.5px',
           letterSpacing: '0.04em',
-          marginBottom: '11px',
+          marginBottom: '6px',
         }}
       >
         {badge}
@@ -624,18 +701,31 @@ function RateCol({ tamil, sub, badge, value, showDivider }) {
       <div
         style={{
           display: 'flex',
-          alignItems: 'flex-start',
+          alignItems: 'flex-end',
           justifyContent: 'center',
-          gap: '1px',
-          marginTop: '-3px',
-          color: '#fff9ec',
-          fontFamily: PLAYFAIR_STACK,
+          gap: '4px',
+          marginTop: '2px',
+          color: '#efe0bc',
+          fontFamily: RATE_STACK,
           fontWeight: 700,
+          letterSpacing: '0',
+          lineHeight: 1,
+          fontKerning: 'normal',
+          fontFeatureSettings: "'kern' 1, 'liga' 1, 'lnum' 1",
           textShadow: '0 2px 8px rgba(0,0,0,0.88)',
         }}
       >
-        <span style={{ fontSize: '9.3px', lineHeight: 1.1, marginTop: '2px' }}>₹</span>
-        <span style={{ fontSize: '13.2px', lineHeight: 1 }}>{formattedValue || '—'}</span>
+        <span
+          style={{
+            fontSize: '10.5px',
+            lineHeight: 1,
+            transform: 'translateY(-7px)',
+            opacity: 0.95,
+          }}
+        >
+          ₹
+        </span>
+        <span style={{ fontSize: '18.5px', lineHeight: 1 }}>{formattedValue || '—'}</span>
       </div>
     </div>
   );
