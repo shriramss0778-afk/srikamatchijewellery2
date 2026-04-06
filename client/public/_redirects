@@ -1,0 +1,2 @@
+/api/* https://srikamatchijewellery2.onrender.com/api/:splat 200
+/uploads/* https://srikamatchijewellery2.onrender.com/uploads/:splat 200
