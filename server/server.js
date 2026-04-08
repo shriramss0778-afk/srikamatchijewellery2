@@ -6,7 +6,7 @@ const path = require('path');
 const { router: imageRoutes, autoSync } = require('./routes/imageRoutes');
 
 const app = express();
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 3000;
 const MONGO_URI = process.env.MONGO_URI || 'mongodb://localhost:27017/sri-kamatchi-jewellery';
 
 app.use(cors({
@@ -31,7 +31,7 @@ mongoose.connect(MONGO_URI)
     console.log('✅ MongoDB connected');
     // Auto-sync uploads folder → DB on every server start
     await autoSync();
-    app.listen(PORT, () => {
+    app.listen(PORT, '0.0.0.0', () => {
       console.log(`🚀 Server running on http://localhost:${PORT}`);
     });
   })
