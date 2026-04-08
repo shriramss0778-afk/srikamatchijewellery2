@@ -83,7 +83,7 @@ Edit `server/.env`:
 
 ```env
 MONGO_URI=mongodb://localhost:27017/sri-kamatchi-jewellery
-PORT=5000
+PORT=3000
 ```
 
 ### 3. Install Dependencies
@@ -123,7 +123,7 @@ npm run dev       # development (nodemon)
 npm start         # production
 ```
 
-Server runs at: `http://localhost:5000`
+Server runs at: `http://localhost:3000`
 
 ### Start Frontend Dev Server
 
@@ -175,7 +175,7 @@ sri-kamatchi-jewellery/
 │   │   ├── App.jsx
 │   │   ├── main.jsx
 │   │   └── index.css              # Tailwind + luxury gold styles
-│   ├── vite.config.js             # Proxy: /api + /uploads → localhost:5000
+│   ├── vite.config.js             # Proxy: /api + /uploads → localhost:3000
 │   └── package.json
 ├── server/
 │   ├── models/Image.js            # Mongoose schema (imageUrl, order, isUsed, usedAt)
